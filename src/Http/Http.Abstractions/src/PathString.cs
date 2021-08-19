@@ -355,7 +355,7 @@ namespace Microsoft.AspNetCore.Http
             {
                 // If the path string has a trailing slash and the other string has a leading slash, we need
                 // to trim one of them.
-                var combinedValue = string.Concat(Value.AsSpan(), other.Value.AsSpan(1));
+                var combined = string.Concat(Value.AsSpan(), other.Value.AsSpan(1));
                 // TODO: Combine and preserve the escaped portion, if any
                 return new PathString(combined);
             }
